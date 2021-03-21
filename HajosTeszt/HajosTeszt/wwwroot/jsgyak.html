@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pascal háromszög</title> 
+    <style>
+        .sor{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div id="pascal">-</div>
+    <script>
+        let hova = document.getElementById("pascal");
+        for (var s = 0; s < 10; s++) {
+            let sor = document.createElement("div");           
+            hova.appendChild(sor);
+            sor.classList.add("sor");
+            for (var o = 0; o < 10; o++) {
+                let szám = document.createElement("div");
+                szám.innerText = (s + 1) * (o + 1);
+                sor.appendChild(szám);              
+            }
+        }
+    </script>
+</body>
+</html>
