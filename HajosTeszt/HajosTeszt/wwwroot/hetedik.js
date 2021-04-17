@@ -3,7 +3,7 @@ function letöltés() {
     fetch('/questions.json')
         .then(response => response.json())
         .then(data => letöltésBefejeződött(data)
-        );
+       );
 }
 
 function letöltésBefejeződött(k) {
