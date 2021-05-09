@@ -13,13 +13,13 @@ namespace HajosTeszt.Controllers
     public class BoatController : ControllerBase
     {
         [HttpGet]
-        [Route("questions/all")]
-        public ActionResult M1()
+        [Route("questions/count")]
+        public int M1()
         {
             HajostesztContext context = new HajostesztContext();
-            var kérdések = from x in context.Questions select x.QuestionText;
+            int kérdések = context.Questions.Count();
 
-            return new JsonResult(kérdések);
+            return kérdések;
 
         }
         [HttpGet]
